@@ -19,7 +19,7 @@ dlib==19.22.0
 # google-auth==1.29.0
 # google-auth-oauthlib==0.4.4
 # google-pasta==0.2.0
-# grpcio==1.32.0
+grpcio==1.32.0
 # h5py==2.10.0
 # idna==2.10
 # imageio==2.9.0
@@ -28,7 +28,7 @@ imutils==0.5.4
 matplotlib==3.4.1
 # mediapipe==0.8
 # networkx==2.5.1
-# numpy==1.19.5
+numpy==1.19.5
 # oauthlib==3.1.0
 opencv-contrib-python==4.5.1.48
 opencv-python==3.4.14.51
