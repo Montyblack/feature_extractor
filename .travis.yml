@@ -13,4 +13,3 @@ script:
 after_success:
   - coverage report -i
   - python setup.py bdist_wheel
-
