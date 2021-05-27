@@ -1,13 +1,16 @@
-language: python
+language: 
+  - python
 os:
-  linux
+  - linux
 dist:
-  focal
+  - focal
 python:
   - "3.8"
 install:
   - pip install -r requirements.txt
 script:
-  coverage run -m unittest tests.py
+  - coverage run --source=get_colortypes_csv -m unittest tests.py
 after_success:
   - coverage report -i
+  - python setup.py bdist_wheel
+
