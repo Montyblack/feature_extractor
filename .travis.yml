@@ -1,9 +1,8 @@
-language: 
-  - python
+language: python
 os:
-  - linux
+  linux
 dist:
-  - focal
+  focal
 python:
   - "3.8"
 install:
