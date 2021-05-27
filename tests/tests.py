@@ -3,11 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from skimage import util
 from skimage.transform import rescale
-import utils.graphic_calcs as ugc
 
-from ../src import get_colortypes_csv
-
-from get_colortypes_csv import \
+import src.utils.graphic_calcs as ugc
+from src.get_colortypes_csv import \
     get_landmarks, \
     get_face_undereyes_color, \
     get_face_forehead_color, \
@@ -19,7 +17,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 class Case1(unittest.TestCase):
     def setUp(self):
-        self.image_path = './data/photo_augmentation/ColortypesDone2CropedAngelEurop/summer/00000428.jpg'
+        self.image_path = './src/data/photo_augmentation/ColortypesDone2CropedAngelEurop/summer/00000428.jpg'
         self.image = plt.imread(self.image_path)
         self.image = util.img_as_ubyte(rescale(self.image, (0.5, 0.5, 1), anti_aliasing=False))
         self.imageBGR = ugc.switch_rgb(self.image)

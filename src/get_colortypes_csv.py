@@ -11,23 +11,23 @@ from skimage import util
 from skimage.io import imread
 from skimage.transform import rescale
 from tqdm import tqdm
-import moduleUnet
-import utils.graphic_calcs as ugc
-import utils.graphic_transforms as ugt
+import src.moduleUnet as moduleUnet
+import src.utils.graphic_calcs as ugc
+import src.utils.graphic_transforms as ugt
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('./data/weights/shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('./src/data/weights/shape_predictor_68_face_landmarks.dat')
 
-image_folder = './data/photo_augmentation/'
-save_folder = './data/result/'
+image_folder = './src/data/photo_augmentation/'
+save_folder = './src/data/result/'
 
 dirs = os.walk(image_folder)
 if not os.path.exists(save_folder):
     os.mkdir(save_folder)
 
-pathToWeights = './data/weights/100.dat'
+pathToWeights = './src/data/weights/100.dat'
 net = moduleUnet.SegmentationUnet()
 net.loadModel(pathToWeights)
 
