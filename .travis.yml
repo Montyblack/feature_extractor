@@ -18,6 +18,5 @@ deploy:
     secure: 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
   file_glob: true
   file: dist/*
-  skip_cleanup: true
   on:
     tags: true
