@@ -18,4 +18,4 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
-        pylint get_colortypes_csv.py --disable=C0116 --disable=E1101 --disable=W0703 --disable=C0103 --disable=W0105
+        pylint src/get_colortypes_csv.py --disable=C0116 --disable=E1101 --disable=W0703 --disable=C0103 --disable=W0105
