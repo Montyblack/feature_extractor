@@ -12,7 +12,12 @@ script:
 after_success:
   - coverage report -i
   - python setup.py bdist_wheel
-uses: actions/upload-artifact@v2
-with:
-  name: dist
-  path: dist/
+deploy:
+  provider: releases
+  api_key:
+    secure: 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
+  file_glob: true
+  file: dist/*
+  skip_cleanup: true
+  on:
+    tags: true
