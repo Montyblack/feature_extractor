@@ -14,7 +14,8 @@ after_success:
   - python setup.py bdist_wheel
 deploy:
   provider: releases
-  api_key: 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
+  api_key: 
+    secure: "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"
   file_glob: true
   file: dist/*
   on:
